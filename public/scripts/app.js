@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         $('#noteModal').modal('open');
 
-       $('#noteButton').on('click', function (noteRet) {
+        $('#noteButton').on('click', function (noteRet) {
             noteRet.preventDefault();
 
             var noteText = $('#noteText');
@@ -24,13 +24,13 @@ $(document).ready(function () {
                     console.log("Cannot", error);
                 });
 
-          noteText.val('');
+            noteText.val('');
 
             return false;
         });
     });
 
-   function popNote(id) {
+    function popNote(id) {
         $('.messages').empty();
 
         $.get("/note/" + id, function (data) {

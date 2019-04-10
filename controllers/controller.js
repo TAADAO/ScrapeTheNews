@@ -1,11 +1,11 @@
-var cheerio = require("cheerio");
-var request = require("request");
-var Article = require("../models/Article");
-var website = ("http://www.espn.com/");
+var cheerio = require('cheerio');
+var request = require('request');
+var Article = require('../models/Article');
+var website = 'https://www.theonion.com/';
 
-function scrapedWeb(cb) {
+function scrapedWeb(callback) {
     request(website, function (error, response, html) {
-        if (error) console.log("There was an error with the scrape", error);
+        if (error) console.log("Error Scraping", error);
 
         var $ = cheerio.load(html);
 
@@ -19,9 +19,9 @@ function scrapedWeb(cb) {
                     link: link
                 });
 
-            scrapeArticle.save(function (error) { });
+            scrapeArticle.save(function (error) {});
         });
-        cb();
+        callback();
     });
 }
 exports.scrapedWeb = scrapedWeb;

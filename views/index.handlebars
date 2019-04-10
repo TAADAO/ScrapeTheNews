@@ -1,12 +1,9 @@
 <nav>
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo"> <img
-                src="https://cdn3.iconfinder.com/data/icons/ballicons-reloaded-free/512/icon-70-512.png"> Welcome to the
-            ESPN News Scraper!</a>
+    <div class="nav-wrapper blue lighten-1">
+        <a href="#" class="brand-logo blue lighten-1"> <img src="https://cdn3.iconfinder.com/data/icons/ballicons-reloaded-free/512/icon-70-512.png"> Welcome to the REAL Fake News Scraper!</a>
         <ul class="right">
             <li>
-                <a href="/scrape" class="waves-effect waves-light btn tooltipped" data-position="bottom"
-                    data-tooltip="Where you can scrape the ESPN site for news!">
+                <a href="/scrape" class="waves-effect waves-light btn tooltipped" data-position="bottom" data-tooltip="All content comes straight from The Onion News site!">
                     <i class="material-icons right">system_update_alt</i>Scrape it!</a>
             </li>
         </ul>
@@ -20,13 +17,10 @@
             {{#each articles}}
             <div class=row>
                 <div class="col s8">
-                    <a href="{{this.link}}" class="collection-item tooltipped" target="_blank" data-position="bottom"
-                        data-tooltip="Click on the link to view the full article!">{{this.title}}</a>
+                    <a href="{{this.link}}" class="collection-item tooltipped" target="_blank" data-position="bottom" data-tooltip="Click the link to view the full news article!">{{this.title}}</a>
                 </div>
                 <div class="col s4">
-                    <button class="noteButton waves-effect waves-light btn tooltipped" id="{{this._id}}"
-                        data-position="bottom" data-tooltip="Add/view your notes"><i
-                            class="material-icons right">speaker_notes</i> Notes</button>
+                    <button class="noteButton waves-effect waves-light btn tooltipped" id="{{this._id}}" data-position="bottom" data-tooltip="Add/view your notes"><i class="material-icons right">speaker_notes</i> Notes</button>
                 </div>
             </div>
             {{/each}}
