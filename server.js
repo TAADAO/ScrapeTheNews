@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
+mongoose.connect("mongodb://localhost/8000", { useNewUrlParser: true });
+
 app.use(express.static("public"));
 
 app.use("/", routes);
